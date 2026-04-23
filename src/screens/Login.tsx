@@ -20,32 +20,34 @@ async function handleLogin(){
 
 return(
 
-<View style={{padding:20,gap:10}}>
+<View style={{flex:1, justifyContent:"center", padding:20, gap:12, backgroundColor:"#111"}}>
 
-<Text style={{fontSize:20}}>LOGIN</Text>
+<Text style={{fontSize:22, color:"#fff", textAlign:"center", marginBottom:10}}>LOGIN</Text>
 
 <TextInput
 placeholder="Email"
+placeholderTextColor="#aaa"
 value={email}
 onChangeText={setEmail}
 autoCapitalize="none"
-style={{borderWidth:1,padding:10}}
+style={{borderWidth:1, borderColor:"#555", padding:12, borderRadius:8, color:"#fff"}}
 />
 
 <TextInput
 placeholder="Senha"
+placeholderTextColor="#aaa"
 secureTextEntry
 value={password}
 onChangeText={setPassword}
-style={{borderWidth:1,padding:10}}
+style={{borderWidth:1, borderColor:"#555", padding:12, borderRadius:8, color:"#fff"}}
 />
 
-<Pressable onPress={handleLogin} style={{borderWidth:1,padding:10}}>
-<Text>Entrar</Text>
+<Pressable onPress={handleLogin} style={{backgroundColor:"#4CAF50", padding:12, borderRadius:8, alignItems:"center"}}>
+<Text style={{color:"#fff"}}>Entrar</Text>
 </Pressable>
 
-<Pressable onPress={()=> navigation.navigate("Cadastro")} style={{borderWidth:1,padding:10}}>
-<Text>Criar conta</Text>
+<Pressable onPress={()=> navigation.navigate("Cadastro")} style={{backgroundColor:"#333", padding:12, borderRadius:8, alignItems:"center"}}>
+<Text style={{color:"#fff"}}>Criar conta</Text>
 </Pressable>
 
 </View>

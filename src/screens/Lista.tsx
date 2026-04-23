@@ -29,23 +29,24 @@ console.log("Erro salvar nota",e)
 
 return(
 
-<View style={{padding:20,gap:10}}>
+<View style={{flex:1, justifyContent:"center", padding:20, gap:12, backgroundColor:"#111"}}>
 
-<Text style={{fontSize:20}}>Nova Nota</Text>
+<Text style={{fontSize:22, color:"#fff", textAlign:"center", marginBottom:10}}>Nova Nota</Text>
 
 <TextInput
 value={noteText}
 onChangeText={setNoteText}
-style={{borderWidth:1,padding:10}}
+style={{borderWidth:1, borderColor:"#555", padding:12, borderRadius:8, color:"#fff"}}
 placeholder="Digite uma nota"
+placeholderTextColor="#aaa"
 />
 
-<Pressable onPress={AddNote} style={{borderWidth:1,padding:10}}>
-<Text>Salvar Nota</Text>
+<Pressable onPress={AddNote} style={{backgroundColor:"#4CAF50", padding:12, borderRadius:8, alignItems:"center"}}>
+<Text style={{color:"#fff"}}>Salvar Nota</Text>
 </Pressable>
 
-<Pressable onPress={()=> navigation.navigate("Refresh")} style={{borderWidth:1,padding:10}}>
-<Text>Ver Notas</Text>
+<Pressable onPress={()=> navigation.navigate("Refresh")} style={{backgroundColor:"#333", padding:12, borderRadius:8, alignItems:"center"}}>
+<Text style={{color:"#fff"}}>Ver Notas</Text>
 </Pressable>
 
 </View>

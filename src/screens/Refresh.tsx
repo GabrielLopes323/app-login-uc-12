@@ -31,19 +31,19 @@ return unsubscribe
 
 return(
 
-<View style={{padding:20}}>
+<View style={{flex:1, padding:20, backgroundColor:"#111"}}>
 
 <Pressable
 onPress={()=> navigation.navigate("Lista")}
-style={{borderWidth:1,padding:10,marginBottom:20}}
+style={{backgroundColor:"#333", padding:12, borderRadius:8, alignItems:"center", marginBottom:20}}
 >
-<Text>Voltar</Text>
+<Text style={{color:"#fff"}}>Voltar</Text>
 </Pressable>
 
 <ScrollView>
 
 {notes.map(n=>(
-<Text key={n.id} style={{fontSize:16,marginBottom:10}}>
+<Text key={n.id} style={{fontSize:16, marginBottom:10, color:"#fff"}}>
 • {n.text}
 </Text>
 ))}
